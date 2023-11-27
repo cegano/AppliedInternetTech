@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+	{{heading}}
+{% endblock %}
+
+{% block body %}
+
+<table class='table'>
+	<tr><th>SID</th><th>Last Name</th><th>Hrs Attempted</th><th>GPA Points</th><th>Major</th></tr>
+	
+	{% for s in stu %}
+	<tr>
+		<td>{{ s.id }}</td>
+		<td>{{ s.last_name }}</td>
+		<td>{{ s.hrs_attempted }}</td>
+		<td>{{ s.gpa_points }}</td>
+		<td>{{ s.major }}</td>
+	</tr>
+	{% endfor %}
+</table>
+
+{% endblock %}

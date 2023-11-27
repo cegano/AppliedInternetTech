@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block heading %} Choose Major {% endblock %}
+{% block body %}
+<p>
+<form action = '/major' method = 'POST'>
+
+	Select a Major <select name='major'>
+		<option value = 'CIT'>CIT</option>
+		<option value = 'EET'>EET</option>
+		<option value = 'BUS'>BUS</option>
+		<option value = 'WEB'>WEB</option>
+	</select>
+	<input type='submit'>
+</form>
+</p>
+
+{% endblock %}
