@@ -13,7 +13,7 @@
 	
 	<form action = "/index" method = "POST" class='form'>
 		<p>
-        Select an Author: <select name='author_id'><br />
+        Select an Author: <select name='last_name'><br />
     		<option value="1">Chandler</option>
 			<option value="2">Faulkner</option>
 			<option value="3">Potter</option>

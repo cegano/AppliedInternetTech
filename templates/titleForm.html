@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}{% endblock %}
+{% block heading %}Book Selected{% endblock %} <br>
+
+{% block body %}
+
+
+		
+			<h3>Title: {{ book.title }}, {{ book.year_published }}<br>
+			Author: {{ book.authors.first_name }} {{ book.authors.last_name }}<br> 
+			Born: {{ book.authors.year_born }}</h3><br>
+	
+	
+
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}  {% endblock %}
+{% block heading %} Name: {{author.first_name}} {{author.last_name}} <br>
+<h2>Born: {{author.year_born}}<h2><br>
+<h3>Selected Books</h3>{% endblock %} 
+
+{% block body %}
+
+
+<table class='table'>
+
+	<tr> <th>Title</th><th>Year Published</th> </tr>
+	{% for book in author.books %}
+		<tr>
+			<td>{{ book.title }}</td>
+            <td>{{ book.year_published }}</td>
+			
+		</tr>
+	{% else %}
+	    <tr><td>No records found</td></tr> 
+	{% endfor %}
+	
+	
+	
+</table>
+
+
+{% endblock %}

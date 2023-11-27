@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+
+{% block title %} Get a Book's Author {% endblock %}
+{% block heading %} Get a Book's Author {% endblock %}
+
+<p>findBooks2</p>
+{% block body %}
+    <ul>
+        {% for b in books %}
+            <li><a href="/showBook?bid={{b.bid}}">{{b.title}}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+	<br>
+   

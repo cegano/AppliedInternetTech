@@ -1,32 +1,41 @@
 <!DOCTYPE html>
-<html>
-	<head><title>{% block title %}{% endblock %}</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-	</head>
-	<body>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <title>{% block title %}{% endblock %} </title>    
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	
+</head>
+<body>	
+
 <div class="container">
+
 	<nav class="navbar navbar-inverse">
-		<div class=container-fluid">
+		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#">CIT109 DB</a>
+				<a class="navbar-brand" href="#">Library</a>
 			</div>
+		
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="/">All Students</a></li>
-				<li><a href="/major">By Major</a></li>
+				<li class="active"><a href="/index">Author's Books</a></li>
+				<li><a href="/findBooks">A Book's Author</a></li>
+				
 			</ul>
 		</div>
 	</nav>
-	
-		<h1> {% block heading %}{% endblock %} </h1>
+
+        <h1>{% block heading %}{% endblock %}</h1>
+
+        {% block body %} {% endblock %}
 		
-		{% block body %}{% endblock %}
 		
-	<div class="footer">
-		<p>&nbsp; &nbsp; &nbsp; &nbsp; student footer</p>
+	<div class='footer'>
+		<p>Footer material. Links, copyright notices, etc.</p>
 	</div>
+	
+</div> 
+
 </body>
-</div>
 </html>
